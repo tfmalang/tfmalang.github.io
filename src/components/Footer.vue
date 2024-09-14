@@ -28,7 +28,7 @@ import { contacts, socials } from "../data";
             </div>
         </div>
     </footer>
-    <section id="credits" class="flex justify-center py-8">
+    <section id="credits" class="flex justify-center py-8 px-4">
         Copyright © 2024 Forum Diskusi Transportasi Malang (FDTM) - Transport for Malang
     </section>
 </template>
