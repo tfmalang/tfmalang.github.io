@@ -22,7 +22,7 @@ const page = ref(1),
 
         <div class="grid md:grid-cols-2 bg-fdtm rounded-xl m-8 lg:mx-16">
 
-            <div class="!bg-no-repeat !bg-center !bg-cover rounded-t-xl md:rounded-l-xl md:rounded-tr-none" style="background: url('ebus.jpg')">
+            <div class="!bg-no-repeat !bg-center !bg-cover rounded-t-xl md:rounded-l-xl md:rounded-tr-none min-h-[25vh]" style="background: url('ebus.jpg')">
                 <div class="bg-fdtm/30 h-full w-full rounded-t-xl md:rounded-l-xl md:rounded-tr-none" />
             </div>
 
