@@ -86,4 +86,197 @@ const links = [{
     icon: 'mdi-instagram',
 }]
 
-export { informations, map, contacts, socials, links }
+const wayfindings = [{
+    id: 'E5F81DAA-752E-4E7D-BE9D-511837A3E1C3',
+    title: 'Perempatan FIK UM',
+    lat: -7.961012,
+    lng: 112.617277,
+    directions: [{
+        rtl: false,
+        color: 'primary',
+        rotate: 0,
+        contents: [{
+            type: 'arrow',
+        }, {
+            type: 'box',
+            context: 'exit-um',
+        }, {
+            type: 'exit-text',
+        }, {
+            type: 'box',
+            context: 'number',
+            value: 6
+        }, {
+            type: 'exits',
+            values: [
+                'Jl. Veteran',
+                {
+                    name: 'Perhentian Veteran',
+                    lines: ['AL', 'GL']
+                }
+            ]
+        }]
+    }, {
+        rtl: false,
+        color: 'primary',
+        rotate: 90,
+        contents: [{
+            type: 'arrow',
+        }, {
+            type: 'box',
+            context: 'exit-um',
+        }, {
+            type: 'exit-text',
+        }, {
+            type: 'box',
+            context: 'number',
+            value: 1
+        }, {
+            type: 'exits',
+            values: [
+                'Jl. Jakarta',
+                {
+                    name: 'Perhentian Jakarta',
+                    lines: ['AL', 'GL']
+                }
+            ]
+        }]
+    }, {
+        rtl: true,
+        color: 'primary',
+        rotate: 180,
+        contents: [{
+            type: 'arrow',
+        }, {
+            type: 'box',
+            context: 'exit-um',
+        }, {
+            type: 'exit-text',
+        }, {
+            type: 'box',
+            context: 'number',
+            value: 2
+        }, {
+            type: 'exits',
+            values: [
+                'Jl. Jakarta',
+                {
+                    name: 'Perhentian Jakarta',
+                    lines: ['AL', 'GL']
+                }
+            ]
+        }]
+    }, {
+        rtl: false,
+        color: 'secondary',
+        rotate: 0,
+        contents: [{
+            type: 'arrow',
+        }, {
+            type: 'box',
+            context: 'lecture-building',
+        }, {
+            type: 'building',
+        }, {
+            type: 'large-text',
+            value: 'FMIPA B18-B25'
+        }, {
+            type: 'walk',
+            distance: 200,
+        }]
+    }, {
+        rtl: false,
+        color: 'secondary',
+        rotate: 0,
+        contents: [{
+            type: 'arrow',
+        }, {
+            type: 'box',
+            context: 'lecture-building',
+        }, {
+            type: 'building',
+        }, {
+            type: 'large-text',
+            value: 'FV A25'
+        }, {
+            type: 'walk',
+            distance: 500,
+        }]
+    }, {
+        rtl: false,
+        color: 'secondary',
+        rotate: 90,
+        contents: [{
+            type: 'arrow',
+        }, {
+            type: 'box',
+            context: 'lecture-building',
+        }, {
+            type: 'building',
+        }, {
+            type: 'large-text',
+            value: 'GKB A19-A21'
+        }, {
+            type: 'walk',
+            distance: 450,
+        }]
+    }, {
+        rtl: true,
+        color: 'secondary',
+        rotate: 180,
+        contents: [{
+            type: 'arrow',
+        }, {
+            type: 'box',
+            context: 'library',
+        }, {
+            type: 'multilang',
+            id: 'Perpustakaan',
+            en: 'Library',
+        }, {
+            type: 'walk',
+            distance: 270,
+        }]
+    }, {
+        rtl: true,
+        color: 'secondary',
+        rotate: 180,
+        contents: [{
+            type: 'arrow',
+        }, {
+            type: 'box',
+            context: 'lecture-building',
+        }, {
+            type: 'building',
+        }, {
+            type: 'large-text',
+            value: 'FT B8-B17'
+        }, {
+            type: 'walk',
+            distance: 270,
+        }]
+    }]
+}, {
+    id: '7D733707-9AEE-41A0-A8A0-1CD7AC22B3CB',
+    title: 'Masjid Al Hikmah',
+    lat: -7.961409,
+    lng: 112.617369,
+    directions: [],
+}, {
+    id: '3106E67B-895D-4FA3-ABC1-86D049D5E061',
+    title: 'Pertigaan arah GKB',
+    lat: -7.962397,
+    lng: 112.619869,
+    directions: [],
+}, {
+    id: '7671B354-C4CC-4A2C-8E1A-60A8B5086AAA',
+    title: 'Gracak & Exit 6 UM',
+    lat: -7.961138,
+    lng: 112.617498,
+    directions: [],
+}].map((wayfinding) => {
+    wayfinding.route = `/wayfindings/${wayfinding.id}`
+    return wayfinding
+})
+
+export { informations, map, contacts, socials, links, wayfindings }

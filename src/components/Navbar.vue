@@ -25,6 +25,9 @@ const menus = [{
     to: '/about',
     text: 'Tentang'
 }, {
+    to: '/wayfindings',
+    text: 'Wayfinding'
+}, {
     to: '/links',
     text: 'Link cepat'
 }]

@@ -1,7 +1,10 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
+import ChiBiCon from './views/ChiBiCon.vue'
 import Home from './views/Home.vue'
 import About from './views/About.vue'
 import Links from './views/Links.vue'
+import Wayfindings from './views/Wayfindings.vue'
+import WayfindingDetail from './views/WayfindingDetail.vue'
 import NotFound from './views/NotFound.vue'
 
 const generateTags = (name, content) => {
@@ -38,6 +41,23 @@ homeTags.push(
     )
 )
 
+const linkTags = defaultTags()
+
+const chibiconTags = defaultTags()
+chibiconTags.push(
+    generateTags(
+        'description',
+        'TfM support for TfSurabaya ChiBiCon 2024.'
+    )
+)
+
+linkTags.push(
+    generateTags(
+        'description',
+        'Link cepat untuk mengakses informasi penting di FDTM - TfM.'
+    )
+)
+
 const router = createRouter({
     mode: 'hash',
     history: createWebHashHistory(),
@@ -63,23 +83,39 @@ const router = createRouter({
         component: Links,
         meta: {
             title: 'FDTM - TfM | Link cepat',
-            metaTags: homeTags
+            metaTags: linkTags
         }
-    }, /* {
-        path: '/informations/:information',
-        name: 'FDTM Redirect',
-        component: information,
+    }, {
+        path: '/wayfindings',
+        name: 'Wayfinding',
+        component: Wayfindings,
         meta: {
-            title: 'Redirect link - FDTM',
+            title: 'Sebaran Penunjuk - FDTM',
             metaTags: homeTags
         }
-    }, */ {
+    }, {
+        path: '/wayfindings/:wayfinding',
+        name: 'Wayfinding Detail',
+        component: WayfindingDetail,
+        meta: {
+            title: 'Detail Penunjuk - FDTM',
+            metaTags: homeTags
+        }
+    }, {
         path: '/:pathMatch(.*)*',
         name: '404',
         component: NotFound,
         meta: {
             title: 'Page not found',
             metaTags: homeTags
+        }
+    }, {
+        path: '/chibicon',
+        name: 'ChiBiCon',
+        component: ChiBiCon,
+        meta: {
+            title: 'TfSurabaya ChiBiCon 2024',
+            metaTags: chibiconTags
         }
     }]
 })

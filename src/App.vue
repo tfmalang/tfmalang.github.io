@@ -5,11 +5,5 @@ import Footer from './components/Footer.vue'
 </script>
 
 <template>
-  <div>
-    <Navbar />
-    <main class="md:mt-20">
-      <router-view :key="$route.fullPath" />
-    </main>
-    <Footer />
-  </div>
+  <router-view :key="$route.fullPath" />
 </template>
