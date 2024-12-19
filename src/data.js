@@ -279,4 +279,122 @@ const wayfindings = [{
     return wayfinding
 })
 
-export { informations, map, contacts, socials, links, wayfindings }
+const chibiconGames = {
+    images: [{
+        image: 'qna/ww.jpg',
+        question: 'Branding e kendaraan iki opo?',
+        answer: 'WIRAWIRI',
+    }, {
+        image: 'qna/2l.jpg',
+        question: 'Koridor endi bus iki?',
+        answer: '2L',
+    }, {
+        image: 'qna/3l.jpg',
+        question: 'Koridor endi bus iki?',
+        answer: '3L',
+    }, {
+        image: 'qna/krd.jpg',
+        question: 'Tipe sepur iki opo?',
+        answer: 'KRD',
+    }, {
+        image: 'qna/krl.jpg',
+        question: 'Tipe sepur iki opo?',
+        answer: 'KRL',
+    }, {
+        image: 'qna/r4.jpg',
+        question: 'Koridor endi bus iki?',
+        answer: 'R4',
+    }, {
+        image: 'qna/r1.jpg',
+        question: 'Koridor endi bus iki?',
+        answer: 'R1',
+    }, {
+        image: 'qna/whoosh.jpg',
+        question: 'Branding e opo sepur iki?',
+        answer: 'WHOOSH',
+    }],
+    shuffles: [{
+        word: 'SALINT',
+        answers: [
+            'LINTAS',
+            'SILAT',
+            'SALIN',
+            'NASAL',
+            'LISAN',
+            'SIAL',
+            'SALI',
+            'SILA',
+            'LAIN',
+            'NASI',
+            'TALI',
+            'TAN',
+            'LAN',
+            'SAL',
+            'LIS',
+            'TAS',
+        ],
+    }, {
+        word: 'DANTIK',
+        answers: [
+            'DAN',
+            'TAN',
+            'KIT',
+            'NIK',
+            'KED',
+            'DANI',
+            'KITA',
+            'KAIN',
+            'TINA',
+            'NADI',
+            'KANDI',
+            'DATIN',
+        ],
+    }],
+    guess: [{
+        question: 'Apa jeneng pasar sing ono rel e nang ngisor?',
+        answers: ['PGS'],
+        options: ['PGS', 'Pasar Besar', 'Pasar Kembang', 'Pasar Genteng'],
+    }, {
+        question: 'Terminus e R1 nang endi ae?',
+        answers: ['Perak', 'Bungurasih'],
+        options: ['Perak', 'Bungurasih', 'Darmo', 'Citraland'],
+    }, {
+        question: 'Terminus e R4 nang endi?',
+        answers: ['Bungurasih', 'UNAIR'],
+        options: ['Bungurasih', 'UNAIR', 'ITS', 'MERR'],
+    }, {
+        question: 'Transum opo sing iso mudun nang Jembatan Merah?',
+        answers: ['R1'],
+        options: ['R1', 'R4', '2L', '3L'],
+    }, {
+        question: 'Halte UNESA dadi terminus transum opo ae?',
+        answers: ['FD8', '2L'],
+        options: ['FD8', '2L', 'FD3', 'FD6'],
+    }, {
+        question: 'Layanan transum opo sing iso muduk nang Al Akbar?',
+        answer: 'FD8',
+        options: ['FD8', 'FD3', 'FD6', '2L'],
+    }, {
+        question: 'Layanan opo sing iso nyambungne RSUD Soetomo karo ITS?',
+        answers: ['2L'],
+        options: ['FD8', 'FD3', 'FD6', '2L'],
+    }, {
+        question: 'TIJ Joyoboyo dadi layanan terminus e feeder opo ae?',
+        answers: ['FD3', 'FD6'],
+        options: ['FD8', 'FD3', 'FD6', '2L'],
+    }, {
+        question: 'Layanan transum opo sing wes iso kesambung antarkota?',
+        answers: ['Trans Jatim'],
+        options: ['Suroboyo Bus', 'Trans Semanggi', 'Trans Palu', 'Trans Jatim']
+    }].map((guess) => {
+        guess.options = guess.options.map((option) => {
+            return {
+                value: option,
+                selected: false
+            }
+        })
+        return guess
+    })
+}
+
+export { informations, map, contacts, socials, links, wayfindings, chibiconGames }
