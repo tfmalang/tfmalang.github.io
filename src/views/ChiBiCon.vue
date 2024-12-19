@@ -6,21 +6,32 @@ const time = ref(60)
 
 const started = ref(false)
 
+const timer = ref(undefined)
+
 const resetTimer = () => {
     time.value = 60
     started.value = false
+
+    // check whether timer interval already started
+    if (timer.value != undefined) {
+        clearInterval(timer.value)
+    }
 }
 
 const startTimer = () => {
     started.value = true
-    const timer = setInterval(() => {
+
+    // replace timer with new interval
+    timer.value = setInterval(() => {
         time.value--
-        if (time.value <= 0) {
+
+        if (time.value === 0) {
             // if value already 0, delay for 10 second before reset timer
             setTimeout(() => {
                 resetTimer()
             }, 10000)
-            clearInterval(timer)
+            
+            clearInterval(timer.value)
         }
     }, 1000)
 }
