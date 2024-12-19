@@ -107,8 +107,8 @@ const enableFocus = () => {
 const determineGame = () => {
     switch (play.value.type) {
         case null:
-            play.value.type = 'guess'
-            play.value.games = chibiconGames.guess
+            play.value.type = 'images'
+            play.value.games = chibiconGames.images
             sortAndReset()
             break;
         case 'images':
