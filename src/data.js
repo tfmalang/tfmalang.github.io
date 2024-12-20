@@ -327,11 +327,13 @@ const chibiconGames = {
             'LAIN',
             'NASI',
             'TALI',
+            'ALIS',
             'TAN',
             'LAN',
             'SAL',
             'LIS',
             'TAS',
+            'LAS',
         ],
     }, {
         word: 'DANTIK',
@@ -348,12 +350,13 @@ const chibiconGames = {
             'NADI',
             'KANDI',
             'DATIN',
+            'ANTIK',
         ],
     }],
     guess: [{
         question: 'Apa jeneng pasar sing ono rel e nang ngisor?',
         answers: ['PGS'],
-        options: ['PGS', 'Pasar Besar', 'Pasar Kembang', 'Pasar Genteng'],
+        options: ['PGS', 'Pasar Besar', 'Pasar Splendid', 'Pasar Genteng'],
     }, {
         question: 'Terminus e R1 nang endi ae?',
         answers: ['Perak', 'Bungurasih'],

@@ -51,8 +51,12 @@ const formattedTime = () => {
     return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
 }
 
+const randomized = (array) => {
+    return array.sort(() => Math.random() - 0.5)
+}
+
 const sortAndReset = (duration=60) => {
-    play.value.games = play.value.games.sort(() => Math.random() - 0.5)
+    play.value.games = randomized(play.value.games)
     play.value.index = 0
     play.value.started = true
 
@@ -119,6 +123,10 @@ const determineGame = () => {
         case 'shuffles':
             play.value.type = 'guess'
             play.value.games = chibiconGames.guess
+
+            play.value.games.forEach(game => {
+                game.options = randomized(game.options)
+            })
             sortAndReset(90)
             break;
         case 'guess':
@@ -145,7 +153,7 @@ const handleShuffles = (event) => {
         if (input.length >= 3 && input.length <= play.value.currentPlay().word.length) {
             const answers = play.value.currentPlay().answers;
             
-            if (answers.includes(input)) {
+            if (answers.includes(input) && !inputRefs.value.includes(input)) {
                 play.value.score++
 
                 inputRefs.value.push(input)
@@ -254,7 +262,7 @@ const startGame = () => {
             </div>
 
             <!-- Guess -->
-            <div v-if="play.type == 'guess'" class="flex flex-col items-center justify-center gap-4">              
+            <div v-if="play.type == 'guess'" class="flex flex-col items-center justify-center gap-4 min-w-max">
                 <h3 class="text-xl font-semibold" v-text="play.currentPlay().question"></h3>
 
                 <!-- select option using boxes, it can be multiple -->
