@@ -375,8 +375,8 @@ const chibiconGames = {
         options: ['FD8', '2L', 'FD3', 'FD6'],
     }, {
         question: 'Layanan transum opo sing iso muduk nang Al Akbar?',
-        answer: 'FD8',
-        options: ['FD8', 'FD3', 'FD6', '2L'],
+        answer: 'FD9',
+        options: ['FD9', 'FD3', 'FD6', '2L'],
     }, {
         question: 'Layanan opo sing iso nyambungne RSUD Soetomo karo ITS?',
         answers: ['2L'],
