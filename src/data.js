@@ -317,6 +317,7 @@ const chibiconGames = {
         word: 'SALINT',
         answers: [
             'LINTAS',
+            'STALIN',
             'SILAT',
             'SALIN',
             'NASAL',
@@ -342,7 +343,8 @@ const chibiconGames = {
             'TAN',
             'KIT',
             'NIK',
-            'KED',
+            'ANTI',
+            'DAKI',
             'DANI',
             'KITA',
             'KAIN',
