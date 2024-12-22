@@ -198,13 +198,16 @@ const startGame = () => {
 
 <template>
     <div class="min-h-screen w-full flex items-center justify-center font-wayfinding">
-        <!-- play button -->
-        <Button @click="startGame" class="bg-fdts text-white border-none px-8" v-show="! play.started">
-            <p class="text-xl">
-                Play!
-                <i class="mdi mdi-play text-xl"></i>
-            </p>
-        </Button>
+        <div class="flex flex-col items-center justify-center" v-show="! play.started">
+            <h1 class="mb-6 text-5xl text-fdts font-bold">Dapatin freebies dari FDTS yuk!</h1>
+            <!-- play button -->
+            <Button @click="startGame" class="bg-fdts text-white border-none px-8">
+                <p class="text-xl">
+                    Main!
+                    <i class="mdi mdi-play text-xl"></i>
+                </p>
+            </Button>
+        </div>
 
         <!-- timer -->
         <div v-show="play.started" class="fixed top-3 right-3 flex items-center justify-center gap-4">
