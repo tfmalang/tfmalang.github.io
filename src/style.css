@@ -3,35 +3,37 @@
 @tailwind utilities;
 
 @layer base {
-  @font-face {
-    font-family: 'Atkinson Hyperlegible';
-    src: url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap') format('woff2');
-    font-weight: 400, 700;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'PT Sans';
-    src: url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap') format('woff2');
-    font-weight: 400, 700;
-    font-style: normal;
-  }
+    @font-face {
+        font-family: 'Atkinson Hyperlegible';
+        src: url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap')
+            format('woff2');
+        font-weight: 400, 700;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'PT Sans';
+        src: url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap')
+            format('woff2');
+        font-weight: 400, 700;
+        font-style: normal;
+    }
 }
 
 :root {
-  font-family: Montserrat;
+    font-family: Montserrat;
 }
 
 .slide-fade-enter-active {
-  transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 .slide-fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+    transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
 }
 
 .slide-fade-enter-from,
 .slide-fade-leave-to {
-  transform: translateX(-20px);
-  opacity: 0;
+    transform: translateX(-20px);
+    opacity: 0;
 }

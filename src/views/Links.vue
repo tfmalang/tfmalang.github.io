@@ -7,13 +7,19 @@ import { links } from '../data'
 
 <template>
     <Base>
-        <Breadcrumb title="Link Kami" :breads="[{
-            to: '/',
-            name: 'Beranda',
-        }, {
-            to: '/links',
-            name: 'Link',
-        }]" />
+        <Breadcrumb
+            title="Link Kami"
+            :breads="[
+                {
+                    to: '/',
+                    name: 'Beranda',
+                },
+                {
+                    to: '/links',
+                    name: 'Link',
+                },
+            ]"
+        />
 
         <section id="links" class="p-8 lg:p-16 min-h-screen">
             <div class="grid md:grid-cols-2 gap-8">

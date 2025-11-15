@@ -5,5 +5,5 @@ import Footer from './components/Footer.vue'
 </script>
 
 <template>
-  <router-view :key="$route.fullPath" />
+    <router-view :key="$route.fullPath" />
 </template>
